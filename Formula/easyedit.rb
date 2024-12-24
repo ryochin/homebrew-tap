@@ -2,9 +2,6 @@ class Easyedit < Formula
   desc "Easy editor on FreeBSD"
   homepage "http://mahon.cwx.net/"
 
-#  url "https://mirrors.ustc.edu.cn/macports/distfiles/ee/ee-1.4.6.src.tgz"
-#  sha256 "a85362dbc24c2bd0f675093fb593ba347b471749c0a0dbefdc75b6334a7b6e4c"
-
   url "http://web.archive.org/web/20120206120635/http://mahon.cwx.net/sources/ee-1.5.2.src.tgz"
   sha256 "e08d7511a48b43ee354042fe3fe7d9cb3431238caedcf4ac729c61a447003918"
 
@@ -16,7 +13,8 @@ class Easyedit < Formula
   def install
     system "sh ./create.make"
     system "make -f make.local"
-    bin.install "ee"
+    bin.install "ee" => "easyedit"
+
     man1.install "ee.1"
   end
 end
