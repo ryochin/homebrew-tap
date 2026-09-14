@@ -1,26 +1,26 @@
 class Gb < Formula
   desc "A Tiny tool for displaying your git branches nicely."
   homepage "https://github.com/ryochin/gb"
-  version "0.1.4"
+  version "0.2.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/ryochin/gb/releases/download/v#{version}/gb-v#{version}-aarch64-apple-darwin"
-      sha256 "3ac4955d0464ac3a46de2b4a63b64904436ccbb937d69f5157e2266f076e1027"
+      sha256 "682016392252549a3619d2a67286ea5c8b1c84c658f61a1723db5979d8013230"
     else
       url "https://github.com/ryochin/gb/releases/download/v#{version}/gb-v#{version}-x86_64-apple-darwin"
-      sha256 "1dc9d3b567a71ab1c1ba29ce0be08a65c288fc8c5159da249283530103ce8c39"
+      sha256 "e2bee428bbb05d76ef1b0d5810f7f80a0b2fc8d8f5de4a446fcadfe748424aa4"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
       url "https://github.com/ryochin/gb/releases/download/v#{version}/gb-v#{version}-aarch64-unknown-linux-gnu"
-      sha256 "8f9ef973a14a4649ddd9390f42ff53f1b430af7f3833cc038bcbd4a3a635c207"
+      sha256 "71780df76f8de9323cadbadb4fe4fe83d11394d01374ca5670be5f85c73a2460"
     else
       url "https://github.com/ryochin/gb/releases/download/v#{version}/gb-v#{version}-x86_64-unknown-linux-gnu"
-      sha256 "a4f4069c01c3f9c6d689baa3429f13292f525362bd43b8b61c4451d00e9d9c76"
+      sha256 "843b4a90d03cc5ecde04736fda20b169cfe10a4363cfe285a0b57c9bbfa9650a"
     end
   end
 
